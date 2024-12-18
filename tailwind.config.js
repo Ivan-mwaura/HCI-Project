@@ -1,5 +1,7 @@
+import tailwindcssAnimate from 'tailwindcss-animate';
+
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   darkMode: ['class'],
   content: [
     './pages/**/*.{js,jsx}',
@@ -75,18 +77,23 @@ module.exports = {
           foreground: 'hsl(var(--card-foreground))',
         },
       },
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+        playfair: ['Playfair Display', 'serif'],
+        lato: ['Lato', 'sans-serif'],
+      },
       backgroundImage: {
-        'authBg': "url('/authBg.png')",
-        'redFlowBg': "url('/redFlowBg.png')",
-        'happyStudents': "url('/uniStudents.png')",
-        'happyStudentsMobile': "url('/uniStudentsMobile.png')",
-        'hiking': "url('/hiking.png')",
-        'hikingMobile': "url('/hikingMobile.png')",
-        'guysLaughing': "url('/guysLaughing.png')",
-        'guysLaughingMobile': "url('/guysLaughingMobile.png')",
-        'heroImg': "url('/heroImg.png')",
-        'heroImg2': "url('/heroImg3.jpg')",
-        'createDealImg': "url('/createDeal.png')"
+        authBg: "url('/authBg.png')",
+        redFlowBg: "url('/redFlowBg.png')",
+        happyStudents: "url('/uniStudents.png')",
+        happyStudentsMobile: "url('/uniStudentsMobile.png')",
+        hiking: "url('/hiking.png')",
+        hikingMobile: "url('/hikingMobile.png')",
+        guysLaughing: "url('/guysLaughing.png')",
+        guysLaughingMobile: "url('/guysLaughingMobile.png')",
+        heroImg: "url('/heroImg.png')",
+        heroImg2: "url('/heroImg3.jpg')",
+        createDealImg: "url('/createDeal.png')",
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -103,17 +110,7 @@ module.exports = {
           to: { height: '0' },
         },
       },
-      
     },
-    fontFamily: {
-      playfair: ['Playfair Display', 'serif'],
-      lato: ['Lato', 'sans-serif'],
-    },
-    // listStyleType: {
-    //   none: true,
-    // },
   },
-  // corePlugins: {
-  // },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [tailwindcssAnimate],
 };
